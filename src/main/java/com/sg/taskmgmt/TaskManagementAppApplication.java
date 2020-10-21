@@ -26,6 +26,8 @@ public class TaskManagementAppApplication {
 		
 		LOG.info("{}", projectService.findById(1L));
 		
+		LOG.info("Hello Ankur!");
+		
 	}
 
 }
