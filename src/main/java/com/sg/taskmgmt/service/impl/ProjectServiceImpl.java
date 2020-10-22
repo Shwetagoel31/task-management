@@ -2,6 +2,7 @@ package com.sg.taskmgmt.service.impl;
 
 import java.time.LocalDate;
 import java.util.Optional;
+import java.util.Random;
 
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
@@ -28,7 +29,7 @@ public class ProjectServiceImpl implements IProjectService {
 	@Override
 	public Project save(Project project) {
 		if (StringUtils.isEmpty(project.getId())) {
-            project.setDateCreated(LocalDate.now());
+            project.setId(new Random().nextLong());
         }
 		return projectRepository.save(project);
 	}
