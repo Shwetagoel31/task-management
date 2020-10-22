@@ -60,7 +60,6 @@ public class ProjectController {
 	
 	@GetMapping
 	public Collection<ProjectDto> findAll(){
-		// Shweta: call findAll first and see what happens when there are NO projects
 		Iterable<Project> projects = projectService.findAll();
 		List<ProjectDto> projectsDto = new ArrayList<>();
 		projects.forEach(p -> projectsDto.add(convertToProjectDto(p)));

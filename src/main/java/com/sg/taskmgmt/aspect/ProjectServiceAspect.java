@@ -13,7 +13,7 @@ public class ProjectServiceAspect {
 	
 	private static final Logger LOG = LoggerFactory.getLogger(ProjectServiceAspect.class);
 	
-	@Before("execution(* com.sg.taskmgmt.service.impl.ProjectService.findById(Long)")
+	@Before("execution(* com.sg.taskmgmt.service.impl.ProjectServiceImpl.findById(Long))")
 	public void before(JoinPoint joinPoint) {
 		LOG.info("Searching Project with ID {}", joinPoint.getArgs()[0]);
 	}
