@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class TaskManagementAppApplicationTests {
+class SpringContextIntegrationTest {
 
 	@Test
-	void contextLoads() {
+	void whenContextLoads_thenNoExceptions() {
 	}
 
 }
