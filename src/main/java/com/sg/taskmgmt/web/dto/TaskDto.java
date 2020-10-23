@@ -2,6 +2,9 @@ package com.sg.taskmgmt.web.dto;
 
 import java.time.LocalDate;
 
+import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.format.annotation.DateTimeFormat.ISO;
+
 import com.sg.taskmgmt.persistence.model.TaskStatus;
 
 public class TaskDto {
@@ -12,8 +15,10 @@ public class TaskDto {
 	
 	private String description;
 	
+	@DateTimeFormat(iso = ISO.DATE)
 	private LocalDate dateCreated;
 	
+	@DateTimeFormat(iso = ISO.DATE)
 	private LocalDate dueDate;
 	
 	private TaskStatus status;
