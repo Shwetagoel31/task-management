@@ -33,7 +33,7 @@ public class Project {
         this.dateCreated = dateCreated;
     }
     
-    protected Project() {}
+    public Project() {}
 
     public Project(Project project) {
         this(project.getName(), project.getDateCreated());

@@ -13,13 +13,14 @@
 		<form th:action="@{/projects}" th:object="${project}" method="post"
 			class="mt-4">
 			<div class="form-group row">
-				<label for="name col-form-label col-sm-2">Name</label> 
-				<input type="text" th:field="*{name}" id="name"
+				<label for="name col-form-label col-sm-2">Name</label> <input
+					type="text" th:field="*{name}" id="name"
 					class="form-control col-sm-6 ml-2" placeholder="Enter Project Name" />
 				<input type="submit" value="Save Project"
 					class="btn btn-primary ml-2" />
 			</div>
-			<p th:if="${#fields.hasErrors('name')}" th:errors="*{name}" class="text-danger"/>
+			<p th:if="${#fields.hasErrors('name')}" th:errors="*{name}"
+				class="text-danger" />
 		</form>
 	</div>
 </body>
